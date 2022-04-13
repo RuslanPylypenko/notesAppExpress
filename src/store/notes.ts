@@ -1,12 +1,4 @@
-interface INote {
-  id: string,
-  name: string,
-  created_at: string,
-  content: string,
-  dates: string[] | null,
-  category: string,
-  status: string
-}
+import { INote } from '../utils/interfaces'
 
 export const notes: INote[] = [
   {

@@ -1,5 +1,5 @@
 import Router from 'express'
-import { getAll, getById } from '../controllers/notesController'
+import { create, getAll, getById, removeById, update } from '../controllers/notesController'
 
 const router = Router()
 
@@ -7,16 +7,10 @@ router.get('/notes', getAll)
 
 router.get('/notes/:id', getById)
 
-router.delete('/notes/:id', (req, res) => {
-  console.log('remove note')
-})
+router.delete('/notes/:id', removeById)
 
-router.patch('/notes/:id', (req, res) => {
-  console.log('update note')
-})
+router.patch('/notes/:id', update)
 
-router.post('/notes', (req, res) => {
-  console.log('create note')
-})
+router.post('/notes', create)
 
 export default router

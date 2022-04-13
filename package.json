@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/RuslanPylypenko/notesAppExpress#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "moment": "^2.29.2",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
