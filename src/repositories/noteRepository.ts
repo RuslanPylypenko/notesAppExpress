@@ -20,14 +20,13 @@ export class NoteRepository {
   }
 
   static update (data: INote): INote {
-    getIndexById(data.id);
-    return {
+    return notes[getIndexById(data.id)] = {
       ...data,
       dates: dateParser(data.content)
     }
   }
 
-  static create(data: ICreateNote): INote{
+  static create (data: ICreateNote): INote {
     const note = {
       id: Id(),
       ...data,
