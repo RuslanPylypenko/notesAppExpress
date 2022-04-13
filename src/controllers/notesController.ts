@@ -1,6 +1,7 @@
 import express from 'express'
-import { ICreateNote, INote } from '../utils/interfaces'
+import { ICreateNote, INote } from '../helpers/interfaces'
 import { NoteRepository } from '../repositories/noteRepository'
+import {getStats} from "../services/noteService";
 
 export const index = (req: express.Request, res: express.Response): void => {
   res.json(NoteRepository.getAll())
@@ -44,6 +45,10 @@ export const create = (req: express.Request, res: express.Response): void => {
   } catch (e) {
     res.status(404).send(e)
   }
+}
+
+export const stats = (req: express.Request, res: express.Response): void =>{
+  res.json(getStats())
 }
 
 

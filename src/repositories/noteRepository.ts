@@ -1,9 +1,9 @@
-import { ICreateNote, INote } from '../utils/interfaces'
+import { ICreateNote, INote } from '../helpers/interfaces'
 import { notes } from '../store/notes'
-import { Id } from '../utils/generator'
+import { Id } from '../helpers/generator'
 import moment from 'moment'
-import { STATUS } from '../utils/constants'
-import { dateParser } from '../utils/dateParser'
+import { STATUS } from '../helpers/constants'
+import { dateParser } from '../helpers/dateParser'
 
 export class NoteRepository {
 

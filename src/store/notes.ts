@@ -1,4 +1,4 @@
-import { INote } from '../utils/interfaces'
+import { INote } from '../helpers/interfaces'
 
 export const notes: INote[] = [
   {

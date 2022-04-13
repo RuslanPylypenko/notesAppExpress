@@ -1,5 +1,5 @@
 import { body } from 'express-validator'
-import { CATEGORIES } from '../utils/constants'
+import { CATEGORIES } from '../helpers/constants'
 
 export const noteSchema = [
   body('name').notEmpty().withMessage('Name is required'),

@@ -1,11 +1,13 @@
 import Router from 'express'
-import { create, index, getById, removeById, update } from '../controllers/notesController'
+import {create, index, getById, removeById, update, stats} from '../controllers/notesController'
 import { noteSchema } from '../validators/noteSchema'
 import { validateRequestSchema } from '../validators/validateRequestSchema'
 
 const router = Router()
 
 router.get('/notes', index)
+
+router.get('/notes/stats', stats)
 
 router.get('/notes/:id', getById)
 

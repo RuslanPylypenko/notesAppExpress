@@ -13,3 +13,9 @@ export interface ICreateNote {
   content: string,
   category: string,
 }
+
+export interface ISummary {
+  category: string,
+  active: number,
+  archived: number
+}
