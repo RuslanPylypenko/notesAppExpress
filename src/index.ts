@@ -1,10 +1,9 @@
 import express from 'express'
+import notesRoutes from './routes/noteRoutes'
 
 const app = express()
 const PORT = process.env.PORT || 3000
 
-app.get('/', (_, res) => {
-    res.status(200).send()
-})
+app.use(notesRoutes)
 
 app.listen(PORT, () => console.log(`Running on port ${PORT}`))
